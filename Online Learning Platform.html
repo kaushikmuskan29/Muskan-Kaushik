@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learnify Platform</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { background: #4CAF50; color: white; text-align: center; padding: 20px; }
+    .courses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding: 20px; }
+    .course { border: 1px solid #ddd; border-radius: 5px; padding: 15px; text-align: center; }
+    .course h3 { margin: 10px 0; color: #4CAF50; }
+    .progress-container { background: #f3f3f3; border-radius: 5px; overflow: hidden; margin: 10px 0; }
+    .progress-bar { height: 20px; background: #4CAF50; width: 70%; text-align: right; color: white; line-height: 20px; font-size: 12px; }
+    footer { text-align: center; background: #333; color: white; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Learnify</h1>
+    <p>Your gateway to interactive learning!</p>
+  </header>
+  <section class="courses">
+    <div class="course">
+      <h3>HTML & CSS Basics</h3>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 80%;">80%</div>
+      </div>
+    </div>
+    <div class="course">
+      <h3>JavaScript Essentials</h3>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 60%;">60%</div>
+      </div>
+    </div>
+    <div class="course">
+      <h3>Python for Beginners</h3>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 50%;">50%</div>
+      </div>
+    </div>
+    <div class="course">
+      <h3>Data Structures</h3>
+      <div class="progress-container">
+        <div class="progress-bar" style="width: 40%;">40%</div>
+      </div>
+    </div>
+  </section>
+  <footer>&copy; 2024 Learnify</footer>
+</body>
+</html>

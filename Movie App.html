@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <style>
+    body { 
+      font-family: 'Arial', sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #f0f4f8; 
+      color: #333;
+    }
+    .container { 
+      text-align: center; 
+      padding: 40px 20px; 
+      background: #ffffff; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    }
+    h1 { 
+      color: #2c3e50; 
+      font-size: 36px; 
+      margin-bottom: 30px; 
+      font-weight: bold;
+    }
+    .movie-list { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+      gap: 20px; 
+      justify-items: center; 
+      margin-bottom: 30px;
+    }
+    .movie-item { 
+      background: linear-gradient(145deg, #3498db, #2980b9); 
+      padding: 15px; 
+      border-radius: 12px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+      color: white; 
+      cursor: pointer; 
+      transition: transform 0.3s, box-shadow 0.3s ease;
+    }
+    .movie-item:hover { 
+      transform: scale(1.05); 
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+    }
+    .movie-item h3 { 
+      margin: 0; 
+      font-size: 18px; 
+      font-weight: 500; 
+    }
+    .details { 
+      display: none; 
+      background: #ffffff; 
+      padding: 30px; 
+      width: 50%; 
+      margin: 20px auto; 
+      border-radius: 12px; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+      color: #333; 
+      text-align: left; 
+      font-size: 16px;
+    }
+    button { 
+      padding: 10px 20px; 
+      background-color: #e74c3c; 
+      color: white; 
+      border: none; 
+      border-radius: 5px; 
+      cursor: pointer; 
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover { 
+      background-color: #c0392b; 
+    }
+    .movie-description strong { 
+      color: #3498db; 
+      font-size: 18px; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Movie List</h1>
+    <div id="movie-list" class="movie-list"></div>
+    <div id="movie-details" class="details">
+      <h2>Movie Details</h2>
+      <div id="movie-description"></div>
+      <button id="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const movies = [
+      { title: "Inception", year: 2010, description: "A skilled thief is tasked with performing inception." },
+      { title: "The Dark Knight", year: 2008, description: "Batman faces off against the Joker." },
+      { title: "Interstellar", year: 2014, description: "Explorers travel beyond the galaxy to save humanity." },
+      { title: "The Matrix", year: 1999, description: "A hacker learns about the true nature of his reality." }
+    ];
+
+    const movieList = document.getElementById('movie-list');
+    const movieDetails = document.getElementById('movie-details');
+    const movieDescription = document.getElementById('movie-description');
+    const closeBtn = document.getElementById('close-btn');
+
+    movies.forEach(movie => {
+      const movieItem = document.createElement('div');
+      movieItem.classList.add('movie-item');
+      movieItem.innerHTML = `<h3>${movie.title} (${movie.year})</h3>`;
+      movieItem.onclick = () => {
+        movieDescription.innerHTML = `
+          <div><strong>Title:</strong> ${movie.title}</div>
+          <div><strong>Year:</strong> ${movie.year}</div>
+          <div><strong>Description:</strong> ${movie.description}</div>
+        `;
+        movieDetails.style.display = 'block';
+      };
+      movieList.appendChild(movieItem);
+    });
+
+    closeBtn.onclick = () => movieDetails.style.display = 'none';
+  </script>
+
+</body>
+</html>
+

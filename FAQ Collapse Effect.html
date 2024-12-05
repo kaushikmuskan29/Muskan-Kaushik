@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Collapse Effect</title>
+  <style>
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f4; }
+    .faq-container { width: 80%; max-width: 600px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .faq-item { margin-bottom: 10px; }
+    button { width: 100%; padding: 15px; background: #007BFF; color: white; border: none; text-align: left; cursor: pointer; font-size: 16px; border-radius: 5px; transition: background 0.3s ease; }
+    button:hover { background: #0056b3; }
+    .answer { display: none; padding: 10px; background: #f8f9fa; border-radius: 5px; margin-top: 5px; }
+  </style>
+</head>
+<body>
+
+<div class="faq-container">
+  <div class="faq-item">
+    <button class="faq-btn">What is FAQ?</button>
+    <div class="answer">FAQ stands for Frequently Asked Questions. It's a list of questions and answers related to a particular topic.</div>
+  </div>
+  
+  <div class="faq-item">
+    <button class="faq-btn">How does the FAQ Collapse effect work?</button>
+    <div class="answer">It works by toggling the visibility of an answer when the user clicks on a question. JavaScript is used to control this interaction.</div>
+  </div>
+  
+  <div class="faq-item">
+    <button class="faq-btn">Can I add more FAQ items?</button>
+    <div class="answer">Yes, you can easily add more questions and answers by copying the existing structure of the FAQ items.</div>
+  </div>
+</div>
+
+<script>
+  const faqButtons = document.querySelectorAll('.faq-btn');
+  faqButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Watch</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #e3f2fd; color: #333; }
+    header { background: #0288d1; color: white; text-align: center; padding: 20px; }
+    .weather-container { display: flex; flex-wrap: wrap; gap: 20px; padding: 20px; justify-content: center; }
+    .weather-card { background: white; border: 1px solid #ddd; border-radius: 5px; padding: 15px; text-align: center; width: 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .weather-card h3 { margin: 10px 0; color: #0288d1; }
+    .weather-card p { margin: 5px 0; }
+    footer { background: #0288d1; color: white; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Weather Watch</h1>
+    <p>Your daily weather updates!</p>
+  </header>
+  <section class="weather-container" id="weather">
+    <div class="weather-card">
+      <h3>New York</h3>
+      <p>Temperature: 18°C</p>
+      <p>Condition: Cloudy</p>
+    </div>
+    <div class="weather-card">
+      <h3>London</h3>
+      <p>Temperature: 12°C</p>
+      <p>Condition: Rainy</p>
+    </div>
+    <div class="weather-card">
+      <h3>Tokyo</h3>
+      <p>Temperature: 22°C</p>
+      <p>Condition: Sunny</p>
+    </div>
+  </section>
+  <footer>&copy; 2024 Weather Watch</footer>
+</body>
+</html>
+

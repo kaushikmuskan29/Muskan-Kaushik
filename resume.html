@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Online Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f3f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 40px;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 18px;
+      color: #7f8c8d;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .section {
+      padding: 20px;
+      background: #ecf0f1;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      font-size: 24px;
+      color: #2980b9;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .section ul {
+      list-style-type: none;
+    }
+
+    .section li {
+      margin-bottom: 10px;
+    }
+
+    .skills ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skills li {
+      background: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 16px;
+    }
+
+    .contact-info,
+    .education,
+    .experience {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-info a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid #3498db;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img">
+      <h1>John Doe</h1>
+      <p>Full Stack Developer | Web Developer | Technology Enthusiast</p>
+    </header>
+
+    <div class="content">
+      <!-- Contact Info -->
+      <div class="section contact-info">
+        <h2>Contact Info</h2>
+        <ul>
+          <li>Email: <a href="kaushikmuskan2006@gmail.com">kaushikmuskan2006@gmail.com</a></li>
+          <li>Phone: +91 9466010102</li>
+          <li>LinkedIn: <a href="www.linkedin.com/in/kaushikmuskan29" target="www.linkedin.com/in/kaushikmuskan29">www.linkedin.com/in/kaushikmuskan29</a></li>
+
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="section skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>C Programming</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+      </div>
+
+      <!-- Education -->
+      <div class="section education">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>Bachelor of Technology in Computer Science</strong>, Geeta University, Panipat (2024-Present)</li>
+          <li><strong>High School </strong>, Rishikul Senior Secondary School, Kurana, Panipat (2018-2022)</li>
+        </ul>
+      </div>
+
+      <!-- Experience -->
+      <div class="section experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>
+            <strong>Full Stack Developer</strong> - TechCorp (2022 - Present)
+            <p>Worked on developing web applications using React, Node.js, and MongoDB.</p>
+          </li>
+          <li>
+            <strong>Junior Web Developer</strong> - Web Solutions (2020 - 2022)
+            <p>Developed and maintained websites using HTML, CSS, and JavaScript.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Muskan Kaushik | All Rights Reserved</p>
+    </footer>
+  </div>
+
+</body>
+</html>
